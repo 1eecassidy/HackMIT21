@@ -28,7 +28,7 @@
     height: auto;
   }
 
-ul > li {
+header ul > li {
     display: inline-block;
     /* You can also add some margins here to make it look prettier */
     zoom:1;
@@ -42,7 +42,7 @@ ul > li {
     margin-right: 80px;
 }
 
-ul {
+header ul {
     text-align: right;
     font-size: 24px;
     color: white;
@@ -136,13 +136,74 @@ header, body, footer {
     margin-left: auto;
     margin-right: auto;
 }
-
-#threebigwords h1 {
+ #threebigwords h1 {
     display: block;
     font-style: italic;
     line-height: 14px;
     margin-left: 20px;
     position: relative;
     top: 20%;
+    text-align: right;
+    width: 95%;
+}
+
+footer ul > li {
+    display: block;
+    /* You can also add some margins here to make it look prettier */
+    zoom:1;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* this fix is needed for IE7- */
+}
+
+.column1 {
+    float: left;
+    width: 21%;
+    margin-left: 15%;
+}
+
+.column2 {
+    float: left;
+    width: 23%;
+}
+
+.column3 {
+    float: left;
+    width: 20%;
+    margin-right: 0px;
+}
+
+hr {
+    margin-left: 0px;
+    margin-right: 0px;
     width: 150%;
-  }
+    opacity: 60%;
+    color: #EFEBCE;
+    margin-bottom: 0%;
+    margin-top: -10px;
+}
+
+footer ul {
+    max-width: 100%;
+    font-size: 24px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    color: #EFEBCE;
+    opacity: 60%;
+}
+
+footer h4 {
+    font-size: 18px;
+    color: #EFEBCE;
+    opacity: 60%;
+}
+
+footer .row {
+    background-color: #A3A380;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#signup {
+    margin-top: -13px;
+}
