@@ -10,7 +10,7 @@
         <img src="../Hackmit21-assets/logo.svg" class="logo" alt="logo" />
         <li><a href="../seller-dashboard/">Performance</a></li>
         <li><a href="../seller-listings">Your Listings</a></li>
-        <li><a href="">New Listing</a></li>
+        <li><a href="javascript:showModal()">New Listing</a></li>
         <li class="icon">
           <img src="../Hackmit21-assets/notification.svg" alt="notification" />
         </li>
@@ -23,7 +23,7 @@
       <li>Active Listings</li>
       <li>Sold Listings</li>
       <li>Scheduled Listings</li>
-      <li>New Listing</li>
+      <li onclick="showModal()">New Listing</li>
     </ul>
     <div class="line"></div>
     <table class="listing-cats">
@@ -85,5 +85,16 @@
     form.addEventListener("submit", () => {
       const data = new FormData(form);
     });
+
+    const modal = document.querySelector(".modal");
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+    function showModal() {
+      modal.style.display = "flex";
+    }
+    function closeModal() {
+      modal.style.display = "none";
+    }
   </script>
 </html>

@@ -56,3 +56,6 @@ class Item {
     document.getElementById("items");
   }
 }
+
+for (const item of items) {
+}
