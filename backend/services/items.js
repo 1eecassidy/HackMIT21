@@ -16,6 +16,12 @@ class ItemService {
     });
     return result;
   }
+  static async getSellerListings(sellerId) {
+    const result = await ItemModel.findAll({
+      where: { sellerId },
+    });
+    return result;
+  }
 
   static async showCart(userId) {
     const result = await ItemModel.findAll({
