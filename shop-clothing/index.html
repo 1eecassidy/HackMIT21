@@ -138,19 +138,32 @@
           <h2>Save the earth, one sustainable dress at a time,</h2>
 
           <!--add images-->
-          <div id="feedArea">
-            <div id="dressZone">
-              <img
-                src="../Hackmit21-assets/karina-tes-H14pfhlfr24-unsplash.jpg"
-                alt="cannot display"
-                width="30px"
-                height="40px"
-              />
-              <p>Some Dress</p>
-              <p>Size S, M, H</p>
-              <p>$71</p>
+          <ul>
+            <div id="feedArea">
+                <li>
+                  <img
+                    src="../Hackmit21-assets/karina-tes-H14pfhlfr24-unsplash.jpg"
+                    alt="cannot display"
+                    width="207px"
+                    height="207px"
+                  />
+                  <h6>Some Dress</h6>
+                  <h6>Size S, M, H</h6>
+                  <h4>$71</h4>
+                </li>
+                <li>
+                  <img
+                    src="../Hackmit21-assets/karina-tes-H14pfhlfr24-unsplash.jpg"
+                    alt="cannot display"
+                    width="207px"
+                    height="207px"
+                  />
+                  <h6>Some Dress</h6>
+                  <h6>Size S, M, H</h6>
+                  <h4>$71</h4>
+                </li>
             </div>
-          </div>
+          </ul>
         </div>
       </div>
     </div>
@@ -226,17 +239,17 @@
       var htmlText = feed.map(function (feedItem) {
         //this!
         return `
-        <div>
-              <img
-                src=${feedItem.imageUrl}
-                alt="cannot display"
-                width="30px"
-                height="40px"
-              />
-              <p>${feedItem.name}</p>
-              <p>${feedItem.size}</p>
-              <p>${feedItem.currentBid}</p>
-        </div>
+                <li onClick="buyItem(feedItem)">
+                  <img
+                    src=${feedItem.imageUrl}
+                    alt="cannot display"
+                    width="207px"
+                    height="207px"
+                  />
+                  <h6>${feedItem.name}</h6>
+                  <h6>Size ${feedItem.size}</h6>
+                  <h4>$${feedItem.currentBid}</h4>
+                </li>
         `;
       });
 

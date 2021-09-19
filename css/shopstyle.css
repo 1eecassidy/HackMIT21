@@ -12,12 +12,13 @@ h2 {
   float: left;
   width: 79%;
   background-color: transparent;
+  height: 800px;
 }
 
 .column-left {
   float: left;
   width: 20%;
-  height: 500px;
+  height: 800px;
   overflow: auto;
   background-color: transparent;
 }
@@ -26,6 +27,7 @@ h2 {
   float: left;
   width: 1%;
   background-color: transparent;
+  height: 800px;
 }
 .column-left ul > li {
   display: block;
@@ -69,7 +71,7 @@ button {
 
 .vl {
   border-right: 1px solid #6b6b51;
-  height: 500px;
+  height: 750px;
   margin-bottom: 50px;
   background-color: transparent;
 }
@@ -155,5 +157,33 @@ hr {
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
+}
+
+#feedArea li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+  zoom: 1;
+  *display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  /* this fix is needed for IE7- */
+}
+
+h6 {
+  font-size: 14px;
+  color: #6b6b51;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h4 {
+  font-size: 14px;
+  color: #6b6b51;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+h2 {
   margin-bottom: 40px;
 }
