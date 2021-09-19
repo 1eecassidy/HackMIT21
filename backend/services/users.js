@@ -22,7 +22,12 @@ class User {
     return result;
   }
 
-  static async update(filter, data) {}
+  static async update(filter, data) {
+    const result = await UserModel.update(data, {
+      where: filter,
+    });
+    return result;
+  }
 
   static async deleteOne(filter) {}
   static async deleteAll(filter) {}

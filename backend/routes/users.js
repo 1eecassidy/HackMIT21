@@ -15,7 +15,7 @@ router.route("/getAll").get(async (req, res) => {
   res.json(result);
 });
 
-router.route("/create").post(async (req, res) => {
+router.route("/addUser").post(async (req, res) => {
   const { data } = req.body;
   const result = await UserService.create(data);
   res.json(result);

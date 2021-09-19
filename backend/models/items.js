@@ -22,6 +22,9 @@ const Item = sequelize.define("Item", {
     //   deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE,
     // },
   },
+  currentBidderId: {
+    type: Sequelize.INTEGER,
+  },
   name: {
     type: Sequelize.STRING,
   },
