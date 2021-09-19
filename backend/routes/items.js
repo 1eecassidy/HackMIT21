@@ -75,6 +75,13 @@ router.route("/showCart").post(async (req, res) => {
   res.json(result);
 });
 
+router.route("/getSellerListings").get(async (req, res) => {
+  const { filter } = req.body;
+  const { sellerId } = filter;
+  const result = await ItemService.getSellerListings(sellerId);
+  res.json(result);
+});
+
 // router.route("/delete").post(async (req, res) => {
 //   const { filter } = req.body;
 //   const result = await ItemService.deleteOne(filter);
