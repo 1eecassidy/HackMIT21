@@ -92,7 +92,10 @@ th:not(:first-child) {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #efebce;
+}
+td img {
+  width: 100%;
 }
 
 .modal {
@@ -102,9 +105,9 @@ tr:nth-child(even) {
   width: 100%;
   height: 100%;
   background: #efebcecc;
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 
 .modal .content {
@@ -117,9 +120,9 @@ tr:nth-child(even) {
   width: 100%;
 }
 
-.modal .content input[type="text"],
-.modal .content textarea,
-.modal .content select {
+.modal input[type="text"],
+.modal textarea,
+.modal select {
   background: #d7d7c9;
   padding: 24px;
   font-weight: 700;
@@ -132,16 +135,21 @@ tr:nth-child(even) {
   color: #6b6b51;
 }
 
-.modal .content .title {
+.modal .title {
   width: 100%;
   margin-bottom: 24px;
+  display: block;
 }
 
-.modal .content .photo {
-  display: none;
+.modal .photo {
+  height: 360px;
+  width: calc(100% - 64px);
+  position: absolute;
+  opacity: 0;
 }
 
-.modal .content .upload-area {
+.modal .upload-area {
+  pointer-events: none;
   display: block;
   width: 100%;
   margin-bottom: 24px;
@@ -152,23 +160,31 @@ tr:nth-child(even) {
   background-position: center;
   cursor: pointer;
 }
+#preview {
+  display: none;
+  width: 100%;
+  margin-bottom: 24px;
+  height: 360px;
+  object-fit: contain;
+}
 
-.modal .content .size {
+.modal .size {
   width: 360px;
   margin: 0 24px 24px 0;
 }
 
-.modal .content .quality {
+.modal .quality {
   width: 360px;
+  margin-bottom: 24px;
 }
 
-.modal .content .description {
+.modal .description {
   width: 360px;
   height: 200px;
   resize: none;
 }
 
-.modal .content .submit {
+.modal .submit {
   position: absolute;
   right: 32px;
   bottom: 32px;

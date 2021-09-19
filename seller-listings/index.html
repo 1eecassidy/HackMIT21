@@ -7,10 +7,17 @@
   <body>
     <header class="seller-nav">
       <ul>
+        <<<<<<< HEAD
+        <img src="../Hackmit21-assets/logo.svg" class="logo" alt="logo" />
+        <li><a href="../seller-dashboard/">Performance</a></li>
+        <li><a href="../seller-listings">Your Listings</a></li>
+        <li><a href="javascript:showModal()">New Listing</a></li>
+        =======
         <!-- <img src="../Hackmit21-assets/logo.svg" class="logo" alt="logo" /> -->
         <li><a href="../seller-dashboard/index.html">Performance</a></li>
         <li><a href="../seller-listings/index.html">Your Listings</a></li>
         <li><a href="">New Listing</a></li>
+        >>>>>>> main
         <li class="icon">
           <img src="../Hackmit21-assets/notification.svg" alt="notification" />
         </li>
@@ -23,7 +30,7 @@
       <li>Active Listings</li>
       <li>Sold Listings</li>
       <li>Scheduled Listings</li>
-      <li>New Listing</li>
+      <li onclick="showModal()">New Listing</li>
     </ul>
     <div class="line"></div>
     <table class="listing-cats">
@@ -50,6 +57,7 @@
         <input name="photo" class="photo" id="photo" type="file" />
         <label class="upload-area" for="photo"></label>
 
+        <label for="photo"><img id="preview" /></label>
         <input name="size" class="size" type="text" placeholder="Enter Size" />
         <select name="quality" class="quality">
           <option value="new">New</option>
@@ -68,6 +76,7 @@
       </form>
     </div>
   </body>
+  <script src="./seller-listings.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.6.0.slim.js"

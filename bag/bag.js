@@ -4,33 +4,33 @@ const items = [
       "https://media.thereformation.com/image/upload/f_auto,q_auto:eco/c_scale,w_auto:breakpoints_100_2560_9_20:1040/v1/prod/product_images/alyssa-high-rise-wide-leg-corduroy-pants/moss/6143c5ea7384371782f577e2/original.jpg",
     name: "Reformation: Alyssa High Rise Corduroy Pants",
     currentPrice: "$47.50",
+    maxBid: "$55.00",
     description:
       "The Alyssa is fitted in the hip and butt, with a more relaxed-fitting wide leg. It features center front pockets and functional belt loops.",
     size: "M",
-    bids: "5",
-    views: "8",
+    time: "6d 12hrs",
   },
   {
     photo:
       "https://media.thereformation.com/image/upload/f_auto,q_auto:eco/c_scale,w_auto:breakpoints_100_2560_9_20:1040/v1/prod/product_images/danny-bodysuit/black/61329bb6e250530142f43eee/original.jpg",
     name: "Danny Bodysuit",
     currentPrice: "$58.50",
+    maxBid: "$75.00",
     description:
       "The Danny is a fitted bodysuit that features a structured v neckline. It's tight fitting throughout to show off your shape.",
     size: "M",
-    bids: 3,
-    views: 5,
+    time: "2d 6hrs",
   },
   {
     photo:
       "https://images.ctfassets.net/p3w8f4svwgcg/7y2VRfdXXQf9rySHPKu0F9/47de8552406c70ff12842d99c2ebf4e6/PMB_1.jpg?w=1400&q=80&fm=webp",
     name: "Priming Moisturizer Balance",
     currentPrice: "$14.00",
+    maxBid: "$20.00",
     description:
       "This moisturizer is lightweight gel-cream moisturizer that balances oil without drying skin or leaving a flat, powdery finish. Pores appear minimized, shine is gone, and skin is hydrated and happy.",
     size: "1.7 fl oz / 50ml",
-    bids: 9,
-    views: 15,
+    time: "7d 21hrs",
   },
 ];
 
@@ -54,9 +54,15 @@ class Item {
     const currentPrice = document.createElement("p");
     currentPrice.innerText = item.currentPrice;
     tds[2].appendChild(currentPrice);
+    const maxBid = document.createElement("p");
+    maxBid.innerText = item.maxBid;
+    tds[3].appendChild(maxBid);
     const description = document.createElement("p");
     description.innerText = item.description;
-    tds[3].appendChild(description);
+    tds[4].appendChild(description);
+    const time = document.createElement("p");
+    time.innerText = item.time;
+    tds[5].appendChild(time);
   }
   addToDom() {
     document.getElementById("items").appendChild(this.el);
