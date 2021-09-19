@@ -69,32 +69,5 @@
       </form>
     </div>
   </body>
-  <script>
-    const upload = document.querySelector("input.photo");
-    upload.addEventListener("change", () => {
-      const [file] = upload.files;
-      if (file) {
-        const preview = document.getElementById("preview");
-        preview.src = URL.createObjectURL(file);
-        preview.style.display = "block";
-        document.querySelector(".modal .upload-area").style.display = "none";
-      }
-    });
-
-    const form = document.getElementById("list-item");
-    form.addEventListener("submit", () => {
-      const data = new FormData(form);
-    });
-
-    const modal = document.querySelector(".modal");
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeModal();
-    });
-    function showModal() {
-      modal.style.display = "flex";
-    }
-    function closeModal() {
-      modal.style.display = "none";
-    }
-  </script>
+  <script src="./seller-listings.js"></script>
 </html>

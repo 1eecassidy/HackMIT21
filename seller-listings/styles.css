@@ -92,7 +92,10 @@ th:not(:first-child) {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #efebce;
+}
+td img {
+  width: 100%;
 }
 
 .modal {
@@ -140,7 +143,7 @@ tr:nth-child(even) {
 
 .modal .photo {
   height: 360px;
-  width: 100%;
+  width: calc(100% - 64px);
   position: absolute;
   opacity: 0;
 }
@@ -172,6 +175,7 @@ tr:nth-child(even) {
 
 .modal .quality {
   width: 360px;
+  margin-bottom: 24px;
 }
 
 .modal .description {
