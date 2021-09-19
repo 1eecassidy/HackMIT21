@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <header class="seller-nav">
+    <ul>
+      <li>
+        <a href="../index.html"
+          ><img src="../Hackmit21-assets/logo.svg" alt="logo" class="logo"
+        /></a>
+      </li>
+      <li><a href="./index.html">Home</a></li>
+    </ul>
+  </header>
+  <body>
+    <form action="../seller-dashboard/index.html">
+      <div class="imgcontainer">
+        <img src="../Hackmit21-assets/user.svg" alt="Avatar" class="icon" />
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Email" name="uname" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+
+        <button type="submit">Sign In</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
+
+      <div class="container" style="background-color: #6b6b51">
+        <button type="button" class="create">Create An Account</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </body>
+</html>
