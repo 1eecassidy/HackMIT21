@@ -99,6 +99,7 @@ footer ul > li {
   zoom: 1;
   margin-left: 10px;
   margin-right: 10px;
+  cursor: pointer;
   /* this fix is needed for IE7- */
 }
 
@@ -142,6 +143,7 @@ footer h4 {
   font-size: 18px;
   color: #efebce;
   opacity: 60%;
+  cursor: pointer;
 }
 
 footer .row {
@@ -153,12 +155,14 @@ footer .row {
 #signup {
   margin-top: 14px;
   margin-bottom: 0px;
+  cursor: pointer;
 }
 
 footer img {
   margin-left: 34px;
   margin-right: 0px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 #lefticon {

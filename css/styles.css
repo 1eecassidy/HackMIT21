@@ -137,6 +137,7 @@ h1 {
 h2 {
   text-align: center;
   color: #5e5b5b;
+  cursor: pointer;
 }
 
 .column-left p {
@@ -199,6 +200,7 @@ footer ul > li {
   zoom: 1;
   margin-left: 10px;
   margin-right: 10px;
+  cursor: pointer;
   /* this fix is needed for IE7- */
 }
 
@@ -242,6 +244,7 @@ footer h4 {
   font-size: 18px;
   color: #efebce;
   opacity: 60%;
+  cursor: pointer;
 }
 
 footer .row {
@@ -253,12 +256,14 @@ footer .row {
 #signup {
   margin-top: 14px;
   margin-bottom: 0px;
+  cursor: pointer;
 }
 
 footer img {
   margin-left: 34px;
   margin-right: 0px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 #lefticon {
@@ -356,4 +361,19 @@ footer img {
   margin-bottom: 30px;
   text-align: left;
   margin-left: 40px;
+  cursor: pointer;
+}
+
+h3 {
+  display: block;
+  color: #6b6b51;
+  text-align: left;
+  font-size: 12px;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 30px;
+  cursor: pointer;
+
 }
