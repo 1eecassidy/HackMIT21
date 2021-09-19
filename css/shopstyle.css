@@ -1,94 +1,140 @@
-h1, h2, ul {
-    color: #6B6B51
+h1,
+h2,
+ul {
+  color: #6b6b51;
 }
 
-h1, h2 {
-    text-align: center;
+h1,
+h2 {
+  text-align: center;
 }
 .column-right {
-    float: left;
-    width: 79%;
-    background-color: transparent;
+  float: left;
+  width: 79%;
+  background-color: transparent;
 }
 
 .column-left {
-    float: left;
-    width: 20%;
-    height: 500px;
-    overflow:auto;
-    background-color: transparent;
+  float: left;
+  width: 20%;
+  height: 500px;
+  overflow: auto;
+  background-color: transparent;
 }
 
 .column-middle {
-    float: left;
-    width: 1%;
-    background-color: transparent;
-
+  float: left;
+  width: 1%;
+  background-color: transparent;
 }
 .column-left ul > li {
-    display: block;
-    /* You can also add some margins here to make it look prettier */
-    zoom:1;
-    *display:inline;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: transparent;
-    /* this fix is needed for IE7- */
+  display: block;
+  /* You can also add some margins here to make it look prettier */
+  zoom: 1;
+  *display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: transparent;
+  /* this fix is needed for IE7- */
 }
 
 .collapsible {
-    color: black;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    margin-top: 10px;
-  }
-  button {
-      background-color: transparent;
-  }
-
-  .content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: transparent;
-  }
-
-  #lastcontent {
-      margin-bottom: 0px;
-      background-color: transparent;
-  }
-
-  .vl {
-    border-right: 1px solid #6B6B51;
-    height: 500px;
-    margin-bottom: 50px;
-    background-color: transparent;
-  }
-
-  #firstbutton {
-      margin-top: 80px;
-  }
-
-.column-left button {
-    font-size: 24px;
-    color: #6B6B51;
-    background-color: transparent;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-top: 10px;
 }
-hr {
-    color: #6B6B51;
-    height: 1px;
-    background-color: #6B6B51;
+button {
+  background-color: transparent;
 }
 
 .content {
-    color: #6B6B51;
-    font-size: 18px;
-    background-color: transparent;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+}
+
+#lastcontent {
+  margin-bottom: 0px;
+  background-color: transparent;
+}
+
+.vl {
+  border-right: 1px solid #6b6b51;
+  height: 500px;
+  margin-bottom: 50px;
+  background-color: transparent;
+}
+
+#firstbutton {
+  margin-top: 80px;
+}
+
+.column-left button {
+  font-size: 24px;
+  color: #6b6b51;
+  background-color: transparent;
+}
+hr {
+  color: #6b6b51;
+  height: 1px;
+  background-color: #6b6b51;
+}
+
+.content {
+  color: #6b6b51;
+  font-size: 18px;
+  background-color: transparent;
+}
+
+.file-path {
+  color: #6b6b51;
+  font-size: 14px;
+  padding: 32px;
+}
+
+.item-content {
+  display: flex;
+}
+.item-content > * {
+  flex: 1;
+  padding: 32px;
+  color: #6b6b51;
+}
+
+.item-content .item-img {
+  width: 250px;
+}
+.item-blurb {
+  margin: 32px 0 32px 0;
+}
+.item-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+.item-size {
+  font-size: 24px;
+}
+.item-color {
+  font-size: 24px;
+  margin: 32px 0 32px 0;
+}
+.add-to-bag {
+  float: right;
+  color: #6b6b51;
+  font-size: 24px;
+  text-decoration: underline;
+  margin: 32px 0 32px 0;
+  border: none;
+  cursor: pointer;
 }

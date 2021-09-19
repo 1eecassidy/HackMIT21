@@ -50,6 +50,7 @@
         <input name="photo" class="photo" id="photo" type="file" />
         <label class="upload-area" for="photo"></label>
 
+        <label for="photo"><img id="preview" /></label>
         <input name="size" class="size" type="text" placeholder="Enter Size" />
         <select name="quality" class="quality">
           <option value="new">New</option>
@@ -69,6 +70,17 @@
     </div>
   </body>
   <script>
+    const upload = document.querySelector("input.photo");
+    upload.addEventListener("change", () => {
+      const [file] = upload.files;
+      if (file) {
+        const preview = document.getElementById("preview");
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+        document.querySelector(".modal .upload-area").style.display = "none";
+      }
+    });
+
     const form = document.getElementById("list-item");
     form.addEventListener("submit", () => {
       const data = new FormData(form);

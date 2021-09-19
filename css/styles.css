@@ -276,7 +276,6 @@ footer img {
 .dropdown {
   position: relative;
   display: inline-block;
-  
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -287,7 +286,6 @@ footer img {
   z-index: 1;
   width: 430px;
   height: 500px;
-
 }
 
 /* Links inside the dropdown */
@@ -300,8 +298,6 @@ footer img {
   text-align: left;
   opacity: 100;
   background-color: #f0efeb;
-  
-  
 }
 
 /* Show the dropdown menu on hover */
@@ -309,8 +305,6 @@ footer img {
   display: block;
   background-color: #f0efeb;
   opacity: 100%;
-  
-  
 }
 
 .columneq {
@@ -319,10 +313,9 @@ footer img {
   background-color: #f0efeb;
   opacity: 100%;
   height: 400px;
-  
 }
 
-.columneq ul > li{
+.columneq ul > li {
   display: block;
   color: #6b6b51;
   text-align: left;
@@ -375,5 +368,4 @@ h3 {
   margin-left: 40px;
   margin-top: 30px;
   cursor: pointer;
-
 }
