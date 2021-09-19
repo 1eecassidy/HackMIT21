@@ -1,144 +1,146 @@
 * {
-    font-family: "Playfair Display";
+  font-family: "Playfair Display";
 }
 
 header a {
-    text-decoration: none;
-    color: white;
-    opacity: 85%;
+  text-decoration: none;
+  color: white;
+  opacity: 85%;
 }
 
-.pinkblockhead a {
-    transition: opacity 0.3s;
-  }
-  .pinkblockhead:hover a {
-    opacity: 0.5;
-  }
-  .pinkblockhead a:hover {
-    opacity: 1;
-  }
-
-  header ul > li {
-    display: inline-block;
-    /* You can also add some margins here to make it look prettier */
-    zoom:1;
-    *display:inline;
-    margin-left: 10px;
-    margin-right: 10px;
-    /* this fix is needed for IE7- */
+.nav a {
+  transition: opacity 0.3s;
+}
+.nav:hover a {
+  opacity: 0.5;
+}
+.nav a:hover {
+  opacity: 1;
 }
 
-#lasticon {
-    margin-right: 80px;
+header ul > li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+  zoom: 1;
+  *display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* this fix is needed for IE7- */
 }
 
-#firsticon {
-    margin-right: 28px;
-    margin-left: 14px;
+#bag-icon {
+  margin-right: 80px;
+}
+
+#search-icon {
+  margin-right: 28px;
+  margin-left: 14px;
 }
 
 header ul {
-    text-align: right;
-    font-size: 24px;
-    color: white;
-    opacity: 85%;
+  text-align: right;
+  font-size: 24px;
+  color: white;
+  opacity: 85%;
 }
 
-.pinkblockhead {
-    background-color: #D8A48F;
-    padding-top: 20px;
-    padding-bottom: 33px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
+.nav {
+  background-color: #d8a48f;
+  padding-top: 20px;
+  padding-bottom: 33px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-header, body, footer {
-    background-color: #F0EFEB;
+header,
+body,
+footer {
+  background-color: #f0efeb;
 }
 
 footer ul > li {
-    display: block;
-    /* You can also add some margins here to make it look prettier */
-    zoom:1;
-    margin-left: 10px;
-    margin-right: 10px;
-    /* this fix is needed for IE7- */
+  display: block;
+  /* You can also add some margins here to make it look prettier */
+  zoom: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* this fix is needed for IE7- */
 }
 
 .column1 {
-    float: left;
-    width: 21%;
-    margin-left: 11%;
+  float: left;
+  width: 21%;
+  margin-left: 11%;
 }
 
 .column2 {
-    float: left;
-    width: 23%;
+  float: left;
+  width: 23%;
 }
 
 .column3 {
-    float: left;
-    width: 35%;
-    margin-right: 0px;
+  float: left;
+  width: 35%;
+  margin-right: 0px;
 }
 
 hr {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 84%;
-    opacity: 60%;
-    color: #EFEBCE;
-    margin-bottom: 0%;
-    margin-top: -15px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 84%;
+  opacity: 60%;
+  color: #efebce;
+  margin-bottom: 0%;
+  margin-top: -15px;
 }
 
 footer ul {
-    max-width: 100%;
-    font-size: 24px;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    color: #EFEBCE;
-    opacity: 60%;
+  max-width: 100%;
+  font-size: 24px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #efebce;
+  opacity: 60%;
 }
 
 footer h4 {
-    font-size: 18px;
-    color: #EFEBCE;
-    opacity: 60%;
+  font-size: 18px;
+  color: #efebce;
+  opacity: 60%;
 }
 
 footer .row {
-    background-color: #A3A380;
-    padding-top: 60px;
-    padding-bottom: 60px;
+  background-color: #a3a380;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 #signup {
-    margin-top: 14px;
-    margin-bottom: 0px;
+  margin-top: 14px;
+  margin-bottom: 0px;
 }
 
 footer img {
-    margin-left: 34px;
-    margin-right: 0px;
-    margin-top: 10px;
+  margin-left: 34px;
+  margin-right: 0px;
+  margin-top: 10px;
 }
 
 #lefticon {
-    margin-left: 45%;
+  margin-left: 45%;
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-bottom: 40px;
 }
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
