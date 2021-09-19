@@ -136,15 +136,20 @@
           <h1>Dresses</h1>
           <h2>Save the earth, one sustainable dress at a time,</h2>
 
-              <!--add images-->
-              <div id="dressZone">
-                <img src="../Hackmit21-assets/karina-tes-H14pfhlfr24-unsplash.jpg" alt="cannot display" width=30px height=40px>
-                <p>Some Dress</p>
-                <p>Size S, M, H</p>
-                <p>$71</p>
-              </div>
-
-
+          <!--add images-->
+          <div id="feedArea">
+            <div id="dressZone">
+              <img
+                src="../Hackmit21-assets/karina-tes-H14pfhlfr24-unsplash.jpg"
+                alt="cannot display"
+                width="30px"
+                height="40px"
+              />
+              <p>Some Dress</p>
+              <p>Size S, M, H</p>
+              <p>$71</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -194,6 +199,11 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+    crossorigin="anonymous"
+  ></script>
   <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -209,8 +219,27 @@
       },
     }).then(function (response) {
       console.log(response.data);
-      //we have got the data now
-      //we can display it now by assigning dom elements inside this function
+      const feed = response.data;
+      // https://stackoverflow.com/questions/29819114/how-to-display-json-data-in-a-div-when-json-data-is-in-array/29819278
+
+      var htmlText = feed.map(function (feedItem) {
+        //this!
+        return `
+        <div>
+              <img
+                src=${feedItem.imageUrl}
+                alt="cannot display"
+                width="30px"
+                height="40px"
+              />
+              <p>${feedItem.name}</p>
+              <p>${feedItem.size}</p>
+              <p>${feedItem.currentBid}</p>
+        </div>
+        `;
+      });
+
+      $("#feedArea").append(htmlText);
     });
 
     for (i = 0; i < coll.length; i++) {
