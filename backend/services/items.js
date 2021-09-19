@@ -72,7 +72,8 @@ class ItemService {
     );
 
     //update the user and add the item to the items that this user has purchased
-    const currentUser = await UserService.find({ id: userId });
+    const currentUser = await UserService.get({ id: userId });
+    // currentUser = currentUser.dataValues;
     const userUpdateResult = await UserService.update(
       { id: userId },
       {
@@ -93,6 +94,11 @@ class ItemService {
   }
 
   // static async deleteOne(filter) {}
-  // static async deleteAll(filter) {}
+  static async deleteAll(filter) {
+    const result = await ItemModel.delete({
+      where: filter,
+    });
+    return result;
+  }
 }
 module.exports = ItemService;

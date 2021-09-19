@@ -81,10 +81,10 @@ router.route("/showCart").post(async (req, res) => {
 //   res.json(result);
 // });
 
-// router.route("/deleteAll").post(async (req, res) => {
-//   const { filter } = req.body;
-//   const result = await ItemService.deleteAll(filter);
-//   res.json(result);
-// });
+router.route("/deleteAll").post(async (req, res) => {
+  const { filter } = req.body;
+  const result = await ItemService.deleteAll(filter);
+  res.json(result);
+});
 
 module.exports = router;

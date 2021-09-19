@@ -49,7 +49,7 @@ sequelize
     // const UserModel = require("./models/users");
     // UserModel.sync({ force: true });
 
-    //making table for user model and item model (one time)
+    // making table for user model and item model (one time)
     // const ItemModel = require("./models/items");
     // ItemModel.sync({ force: true });
 

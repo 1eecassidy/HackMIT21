@@ -2,11 +2,11 @@ const UserModel = require("../models/users");
 
 class User {
   static async get(filter) {
-    const result = await UserModel.findAll({
+    const result = await UserModel.findOne({
       where: filter,
     });
-    if (result) return result[0];
-    else return [];
+
+    return result;
   }
 
   //fix
@@ -30,7 +30,12 @@ class User {
   }
 
   static async deleteOne(filter) {}
-  static async deleteAll(filter) {}
+  static async deleteAll(filter) {
+    const result = await UserModel.delete({
+      where: filter,
+    });
+    return result;
+  }
 }
 
 module.exports = User;
