@@ -6,6 +6,8 @@
 //4) sudo npm install -g nodemon
 //then craete server.js
 // const config = require("config");
+const pathToCRTFile = "/home/yash/.postgresql/root.crt";
+const cockroachPassword = "tZL02rNcIwQKSOJM";
 const express = require("express");
 const cors = require("cors");
 const errorMiddleWare = require("./middleware/error");
@@ -26,14 +28,14 @@ const Sequelize = require("sequelize-cockroachdb");
 const sequelize = new Sequelize({
   dialect: "postgres",
   username: "yash",
-  password: "tZL02rNcIwQKSOJM",
+  password: cockroachPassword,
   host: "free-tier.gcp-us-central1.cockroachlabs.cloud",
   port: 26257,
   database: "creamy-fox-3645.defaultdb",
   dialectOptions: {
     ssl: {
       // For secure connection:
-      ca: fs.readFileSync("/home/yash/.postgresql/root.crt").toString(),
+      ca: fs.readFileSync(pathToCRTFile).toString(),
     },
   },
   logging: false,
@@ -52,21 +54,21 @@ sequelize
     // ItemModel.sync({ force: true });
 
     // console.log("The table for the User model was just (re)created!");
+
+    //routes
+    const usersRouter = require("./routes/users");
+    app.use("/users", usersRouter);
+    const authRouter = require("./routes/auth");
+    app.use("/auth", authRouter);
+    const itemsRouter = require("./routes/items");
+    app.use("/items", itemsRouter);
+
+    //error handling middleware used at end,for routes not used!:
+    app.use(errorMiddleWare);
   })
   .catch((err) => {
     console.error("Unable to connect to the database:", err);
   });
-
-//routes
-const usersRouter = require("./routes/users");
-app.use("/users", usersRouter);
-const authRouter = require("./routes/auth");
-app.use("/auth", authRouter);
-const itemsRouter = require("./routes/items");
-app.use("/items", itemsRouter);
-
-//error handling middleware used at end,for routes not used!:
-app.use(errorMiddleWare);
 
 //app listn
 app.listen(port, () => {
@@ -75,4 +77,4 @@ app.listen(port, () => {
 
 //when closing the app
 process.on("SIGINT", function () {});
-module.exports = { sequelize, Sequelize };
+module.exports = { sequelize };

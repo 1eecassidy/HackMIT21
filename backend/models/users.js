@@ -24,9 +24,11 @@ const User = sequelize.define("User", {
   },
   itemsSold: {
     type: Sequelize.ARRAY(Sequelize.DOUBLE),
+    defaultValue: [],
   },
   itemsPurchased: {
     type: Sequelize.ARRAY(Sequelize.DOUBLE),
+    defaultValue: [],
   },
   totalValueSold: {
     type: Sequelize.DOUBLE,
@@ -50,6 +52,6 @@ const User = sequelize.define("User", {
   },
 });
 
-console.log(" we are making user model");
+// console.log(" we are making user model");
 
 module.exports = User;
