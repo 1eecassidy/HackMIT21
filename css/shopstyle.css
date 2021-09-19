@@ -8,18 +8,21 @@ h1, h2 {
 .column-right {
     float: left;
     width: 79%;
+    background-color: transparent;
 }
 
 .column-left {
     float: left;
     width: 20%;
     height: 500px;
-    overflow: scroll;
+    overflow:auto;
+    background-color: transparent;
 }
 
 .column-middle {
     float: left;
     width: 1%;
+    background-color: transparent;
 
 }
 .column-left ul > li {
@@ -29,12 +32,13 @@ h1, h2 {
     *display:inline;
     margin-left: 10px;
     margin-right: 10px;
+    background-color: transparent;
     /* this fix is needed for IE7- */
 }
 
 .collapsible {
     color: black;
-    background-color: null;
+    background-color: transparent;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -58,12 +62,14 @@ h1, h2 {
 
   #lastcontent {
       margin-bottom: 0px;
+      background-color: transparent;
   }
 
   .vl {
     border-right: 1px solid #6B6B51;
     height: 500px;
     margin-bottom: 50px;
+    background-color: transparent;
   }
 
   #firstbutton {
@@ -73,6 +79,7 @@ h1, h2 {
 .column-left button {
     font-size: 24px;
     color: #6B6B51;
+    background-color: transparent;
 }
 hr {
     color: #6B6B51;
@@ -83,4 +90,5 @@ hr {
 .content {
     color: #6B6B51;
     font-size: 18px;
+    background-color: transparent;
 }
