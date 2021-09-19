@@ -3,20 +3,75 @@
   <head>
     <title>Listings</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
   </head>
-  <header class="seller-nav">
-    <ul>
-      <li><a href="#Dashboard">Performance</a></li>
-      <li><a href="../seller-listings">Your Listings</a></li>
-      <!-- <li><a href="#aboutus">New Listing</a></li> -->
-      <li class="icon">
-        <img src="../Hackmit21-assets/notification.svg" alt="notification" />
-      </li>
-      <li class="icon">
-        <img src="../Hackmit21-assets/user.svg" alt="user" />
-      </li>
+  <body>
+    <header class="seller-nav">
+      <ul>
+        <img src="../Hackmit21-assets/logo.svg" class="logo" alt="logo" />
+        <li><a href="../seller-dashboard/">Performance</a></li>
+        <li><a href="../seller-listings">Your Listings</a></li>
+        <li><a href="">New Listing</a></li>
+        <li class="icon">
+          <img src="../Hackmit21-assets/notification.svg" alt="notification" />
+        </li>
+        <li class="icon">
+          <img src="../Hackmit21-assets/user.svg" alt="user" />
+        </li>
+      </ul>
+    </header>
+    <ul class="listing-types">
+      <li>Active Listings</li>
+      <li>Sold Listings</li>
+      <li>Scheduled Listings</li>
+      <li>New Listing</li>
     </ul>
-  </header>
-  <body></body>
+    <div class="line"></div>
+    <table class="listing-cats">
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Title</th>
+          <th>Current Price</th>
+          <th>Product Description</th>
+          <th>Bids</th>
+          <th>Views</th>
+        </tr>
+      </thead>
+      <tbody id="items"></tbody>
+    </table>
+    <div class="modal">
+      <form class="content" id="list-item">
+        <input
+          name="title"
+          class="title"
+          type="text"
+          placeholder="Enter Title"
+        />
+        <input name="photo" class="photo" id="photo" type="file" />
+        <label class="upload-area" for="photo"></label>
+
+        <input name="size" class="size" type="text" placeholder="Enter Size" />
+        <select name="quality" class="quality">
+          <option value="new">New</option>
+          <option value="po-like-new">Pre-Owned, Like New</option>
+          <option value="po-very-good">Pre-Owned, Very Good</option>
+          <option value="po-good">Pre-Owned, Good</option>
+          <option value="po-light-damage">Pre-Owned, Light Damage</option>
+        </select>
+        <br />
+        <textarea
+          name="description"
+          class="description"
+          placeholder="Add a discription (Optional)"
+        ></textarea>
+        <input class="submit" type="submit" value="Create listing" />
+      </form>
+    </div>
+  </body>
+  <script>
+    const form = document.getElementById("list-item");
+    form.addEventListener("submit", () => {
+      const data = new FormData(form);
+    });
+  </script>
 </html>
