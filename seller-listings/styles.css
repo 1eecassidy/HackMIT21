@@ -1,0 +1,29 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.dashboard {
+  width: 100vw;
+}
+.icon {
+  width: 32px;
+  align-items: center;
+}
+.seller-nav a {
+  transition: opacity 0.3s;
+}
+.seller-nav:hover a {
+  opacity: 0.5;
+}
+.seller-nav a:hover {
+  opacity: 1;
+}
+.seller-nav {
+  background-color: #a3a380;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
