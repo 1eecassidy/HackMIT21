@@ -31,7 +31,32 @@
     <div class="imgthing">
       <h1>Auction for Good</h1>
     </div>
-    <p>cool</p>
+    <ul>
+      <div id="feedArea">
+          <li>
+            <a href="../shop-item-detail/index.html"><img
+              src="https://media.thereformation.com/image/upload/f_auto,q_auto:eco/c_scale,w_auto:breakpoints_100_2560_9_20:1040/v1/prod/product_images/pacey-dress/flores/5f77cd7e62c2a00018cb2aeb/original.jpg"
+              alt="cannot display"
+              width="207px"
+              height="207px"
+            /></a>
+            <h6>Dress</h6>
+            <h6>Size S, M, H</h6>
+            <h4>$71</h4>
+          </li>
+          <li>
+            <img
+              src="../Hackmit21-assets/karina-tes-H14pfhlfr24-unsplash.jpg"
+              alt="cannot display"
+              width="207px"
+              height="207px"
+            />
+            <h6>Some Dress</h6>
+            <h6>Size S, M, H</h6>
+            <h4>$71</h4>
+          </li>
+      </div>
+    </ul>
   </body>
   <footer>
     <div class="row">
@@ -77,4 +102,63 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    let h = document.getElementById("rowheight").getBoundingClientRect().height;
+
+    //get the feed of clothes and add to 141
+    // Send a POST request
+    axios({
+      method: "get",
+      url: "http://localhost:5002/items/showFeed",
+      data: {
+        filter: {},
+      },
+    }).then(function (response) {
+      console.log(response.data);
+      const feed = response.data;
+      // https://stackoverflow.com/questions/29819114/how-to-display-json-data-in-a-div-when-json-data-is-in-array/29819278
+
+      var htmlText = feed.map(function (feedItem) {
+        //this!
+        return `
+                <li onClick="buyItem(feedItem)">
+                  <img
+                    src=${feedItem.imageUrl}
+                    alt="cannot display"
+                    width="207px"
+                    height="207px"
+                  />
+                  <h6>${feedItem.name}</h6>
+                  <h6>Size ${feedItem.size}</h6>
+                  <h4>$${feedItem.currentBid}</h4>
+                </li>
+        `;
+      });
+
+      $("#feedArea").append(htmlText);
+    });
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          h = document
+            .getElementById("rowheight")
+            .getBoundingClientRect().height;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </html>
