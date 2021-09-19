@@ -185,14 +185,25 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
     let h = document.getElementById("rowheight").getBoundingClientRect().height;
-    
+
     //get the feed of clothes and add to 141
-    
+    // Send a POST request
+    axios({
+      method: "get",
+      url: "http://localhost:5002/items/showFeed",
+      data: {
+        filter: {},
+      },
+    }).then(function (response) {
+      console.log(response.data);
+      //we have got the data now
+      //we can display it now by assigning dom elements inside this function
+    });
 
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function () {
