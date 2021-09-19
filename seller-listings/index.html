@@ -7,7 +7,6 @@
   <body>
     <header class="seller-nav">
       <ul>
-
         <!-- <img src="../Hackmit21-assets/logo.svg" class="logo" alt="logo" /> -->
         <li><a href="../seller-dashboard/index.html">Performance</a></li>
         <li><a href="../seller-listings/index.html">Your Listings</a></li>
@@ -69,10 +68,52 @@
       </form>
     </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+    crossorigin="anonymous"
+  ></script>
   <script>
     const form = document.getElementById("list-item");
-    form.addEventListener("submit", () => {
-      const data = new FormData(form);
-    });
+    form.onsubmit = function (e) {
+      e.preventDefault();
+      const userId = 694587823512692497;
+      const name = e.target["title"].value;
+      const size = e.target["size"].value;
+      const itemCondition = e.target["quality"].value;
+      const description = e.target["description"].value;
+      const endDate = new Date(new Date().getDate() + 5);
+      const imageUrl =
+        "https://media.wired.com/photos/5ae767a6c6901c5ee08405de/master/pass/LilMiquela.jpg";
+      const startBid = 5;
+      const category = "shirt";
+      // const photo = e.target["photo"].value;
+
+      // console.log({ name, size, itemCondition, description });
+      axios({
+        method: "post",
+        url: "http://localhost:5002/items/createItem",
+        data: {
+          data: {
+            userId,
+            name,
+            size,
+            itemCondition,
+            description,
+            endDate,
+            startBid,
+            category,
+            imageUrl,
+          },
+        },
+      }).then(function (response) {
+        console.log(response);
+      });
+    };
+    // form.addEventListener("submit", () => {
+    //   const data = new FormData(form);
+    //   alert(data.toString());
+    // });
   </script>
 </html>
