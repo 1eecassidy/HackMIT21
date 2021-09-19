@@ -1,23 +1,71 @@
 .imgthing {
-    background-image: url("../Hackmit21-assets/noelle-australia-vGtfXyEtSBc-unsplash.jpg");
-    background-size: cover;
-    background-position-y: 35%;
-    width: 1436px;
-    height: 466px;
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -60px;
+  background-image: url("../Hackmit21-assets/noelle-australia-vGtfXyEtSBc-unsplash.jpg");
+  background-size: cover;
+  background-position-y: 35%;
+  width: 1436px;
+  height: 466px;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -60px;
 }
 h1 {
-    display: block;
-    /* font-style: italic; */
-    position: relative;
-    top: 32%;
-    text-align: center;
-    font-weight: 400;
-    font-size: 144px;
-    color: #A3A380;
-    margin-top: -60px;
-  }
+  display: block;
+  /* font-style: italic; */
+  position: relative;
+  top: 32%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 144px;
+  color: #a3a380;
+  margin-top: -60px;
+}
+
+.file-path {
+  color: #6b6b51;
+  font-size: 14px;
+  padding: 32px;
+}
+
+.item-content {
+  display: flex;
+}
+.item-content > * {
+  flex: 1;
+  padding: 32px;
+  color: #6b6b51;
+}
+
+.item-content .item-img {
+  width: 250px;
+}
+.item-blurb {
+  margin: 32px 0 32px 0;
+}
+.item-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+.item-size {
+  font-size: 24px;
+}
+.item-condition {
+  font-size: 24px;
+  margin: 32px 0 32px 0;
+}
+.item-max-bid {
+  font-size: 24px;
+  margin: 32px 0 32px 0;
+}
+.add-to-bag {
+  float: right;
+  color: #6b6b51;
+  font-size: 24px;
+  text-decoration: underline;
+  margin: 32px 0 32px 0;
+  border: none;
+  cursor: pointer;
+}
